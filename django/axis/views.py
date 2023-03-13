@@ -5,4 +5,4 @@ from axis.models import Axle
 
 class AxleListView(ListView):
     model = Axle
-    template_name = 'list.html'
+    template_name = 'lists/list.html'

@@ -19,6 +19,8 @@ class HomeView(RedirectView):
 
         raise Http404
 
+class EixosList(TemplateView):
+    template_name = 'prepages/eixos/index.html'
 
 
 class Handler400View(TemplateView):

@@ -11,8 +11,10 @@ urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('api/', include('biopark.api_urls')),
-    path("eixos/", include('axis.urls'))
+    path("eixos/", include('axis.urls')),
+    path("eixos/listar/", views.EixosList.as_view())
 ]
+
 
 handler400 = views.Handler400View.as_view()
 handler403 = views.Handler403View.as_view()
