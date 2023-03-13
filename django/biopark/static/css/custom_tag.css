@@ -1,0 +1,12 @@
+.tagify .tagify__tag.tagify__tag--primary:not(.tagify--notAllowed) {
+    --tag-inset-shadow-size: 0em;
+    background-color: #009ef7;
+}
+
+.tagify .tagify__tag.tagify__tag--primary:not(.tagify--notAllowed) .tagify__tag__removeBtn {
+    background-color: white;
+}
+
+.tagify .tagify__tag.tagify__tag--primary:not(.tagify--notAllowed) div .tagify__tag-text {
+    color: #ffffff;
+}

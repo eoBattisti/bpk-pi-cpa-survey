@@ -1,0 +1,70 @@
+{% load static %}
+
+<div id="kt_notification_menu" class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" data-api="{% url 'api:notifications-list' %}" data-csrf="{{ csrf_token }}" data-url-list="{% url 'notifications:list' %}" data-user-id="{{ request.user.id }}">
+  <!-- Header -->
+  <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url({% static 'media/misc/menu-header-bg.jpg' %})">
+    <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notificações
+      <span class="fs-8 opacity-75 ps-3">
+        <span class="me-1" id="kt_notification_menu_all">
+          <div class="spinner-grow spinner-grow-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </span>
+        avisos
+      </span>
+    </h3>
+    <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
+      <li class="nav-item">
+        <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_not_viewed">Recentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_visualized">Já vistos</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="kt_topbar_notifications_not_viewed" role="tabpanel">
+      <div id="kt_topbar_notifications_not_viewed_loading" class="px-8 py-5 d-flex justify-content-center">
+        <div class="spinner-border text-muted" style="width: 3rem; height: 3rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+			<div id="kt_topbar_notifications_not_viewed_content" class="scroll-y mh-325px my-5 px-8 d-none">
+      </div>
+
+      <div class="py-3 text-center border-top">
+        <a href="{% url 'notifications:list' %}" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
+          <span class="svg-icon svg-icon-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+              <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="kt_topbar_notifications_visualized" role="tabpanel">
+      <div id="kt_topbar_notifications_visualized_loading" class="px-8 py-5 d-flex justify-content-center">
+        <div class="spinner-border text-muted" style="width: 3rem; height: 3rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="kt_topbar_notifications_visualized_content" class="scroll-y mh-325px my-5 px-8">
+      </div>
+
+      <div class="py-3 text-center border-top">
+        <a href="{% url 'notifications:list' %}" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
+          <span class="svg-icon svg-icon-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+              <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

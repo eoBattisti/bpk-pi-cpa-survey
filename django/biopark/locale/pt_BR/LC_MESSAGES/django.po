@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 10:17-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: biopark/defaults.py:5
+msgid "Company"
+msgstr "Empresa"
+
+#: biopark/defaults.py:6
+msgid "Event"
+msgstr "Evento"
+
+#: biopark/defaults.py:7
+msgid "Service"
+msgstr "Serviço"
+
+#: biopark/defaults.py:8
+msgid "Product"
+msgstr "Produto"
+
+#: biopark/defaults.py:12
+msgid "Draft"
+msgstr "Rascunho"
+
+#: biopark/defaults.py:13
+msgid "Published"
+msgstr "Publicado"
+
+#: biopark/defaults.py:17
+msgid "Description"
+msgstr "Descrição"
+
+#: biopark/defaults.py:18
+msgid "Highligths"
+msgstr "Destaques"
+
+#: biopark/defaults.py:22
+msgid "Root"
+msgstr "Raiz"
+
+#: biopark/defaults.py:23
+msgid "Descriptive"
+msgstr "Descritivo"
+
+#: biopark/defaults.py:27
+msgid "Numbers"
+msgstr "Números"
+
+#: biopark/defaults.py:28
+msgid "Products"
+msgstr "Produtos"
+
+#: biopark/defaults.py:29
+msgid "Services"
+msgstr "Serviços"
+
+#: biopark/defaults.py:30
+msgid "Highlights"
+msgstr "Destaques"
+
+#: biopark/defaults.py:31
+msgid "Social Media"
+msgstr "Mídia social"
+
+#: biopark/defaults.py:32
+msgid "Guest"
+msgstr "Convidado"
+
+#: biopark/defaults.py:33
+msgid "Search Highlights"
+msgstr "Destaques de busca"
+
+#: biopark/defaults.py:34
+msgid "Features"
+msgstr "Funcionalidades"
+
+#: biopark/defaults.py:35
+msgid "Results"
+msgstr "Resultados"
+
+#: biopark/defaults.py:36
+msgid "Images"
+msgstr "Imagens"
+
+#: biopark/defaults.py:40
+msgid "Multiplier"
+msgstr "Multiplicador"
+
+#: biopark/defaults.py:41
+msgid "Main"
+msgstr "Principal"
+
+#: biopark/defaults.py:42
+msgid "Custom"
+msgstr "Custom"
+
+#: biopark/defaults.py:46
+msgid "External"
+msgstr "Externo"
+
+#: biopark/defaults.py:47
+msgid "Internal"
+msgstr "Interno"
+
+#: biopark/settings/main.py:169
+msgid "English"
+msgstr "Inglês"
+
+#: biopark/settings/main.py:170
+msgid "Portuguese"
+msgstr "Português"
+
+#: biopark/templates/registration/password_reset_email.html:2
+msgid ""
+"\n"
+"Para iniciar o processo de redefinição de senha para a sua conta no Biopark "
+"Search,\n"
+"clique no link abaixo:\n"
+msgstr ""
+
+#: biopark/templates/registration/password_reset_email.html:7
+msgid ""
+"\n"
+"Se clicando no link acima não funcionou, por gentileza copie e cole a URL em "
+"uma \n"
+"nova aba em seu navegador.\n"
+"\n"
+"Atenciosamente,\n"
+"Time Biopark\n"
+msgstr ""
+
+#: biopark/templates/registration/password_reset_subject.txt:2
+#, python-format
+msgid "Password reset on %(site_name)s"
+msgstr "Redefinição de senha em %(site_name)s"
+
+#: groups/models.py:18
+msgid "Can view group"
+msgstr "Pode ver grupo"
+
+#: groups/models.py:19
+msgid "Can create group"
+msgstr "Pode criar grupo"
+
+#: groups/models.py:20
+msgid "Can update group"
+msgstr "Pode atualizar grupo"
+
+#: groups/models.py:21
+msgid "Can delete group"
+msgstr "Pode deletar grupo"
+
+#: groups/models.py:22
+msgid "Can update group users"
+msgstr "Pode atualizar grupo de usuários"
+
+#: groups/models.py:23
+msgid "Can update group permissions"
+msgstr "Pode atualizar grupo de permissões"

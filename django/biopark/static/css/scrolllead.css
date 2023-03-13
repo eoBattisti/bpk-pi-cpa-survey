@@ -1,0 +1,71 @@
+:root,
+[data-theme=light] {
+  --kt-scrolllead-opacity: 0;
+  --kt-scrolllead-opacity-on: 0.3;
+  --kt-scrolllead-opacity-hover: 1;
+  --kt-scrolllead-box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  --kt-scrolllead-bg-color: #50cd89;
+  --kt-scrolllead-bg-color-hover: #50cd89;
+  --kt-scrolllead-icon-color: #ffffff;
+  --kt-scrolllead-icon-color-hover: #ffffff;
+}
+
+[data-theme=dark] {
+  --kt-scrolllead-opacity: 0;
+  --kt-scrolllead-opacity-on: 0.3;
+  --kt-scrolllead-opacity-hover: 1;
+  --kt-scrolllead-box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  --kt-scrolllead-bg-color: #50cd89;
+  --kt-scrolllead-bg-color-hover: #50cd89;
+  --kt-scrolllead-icon-color: #ffffff;
+  --kt-scrolllead-icon-color-hover: #ffffff;
+}
+
+.scrolllead {
+  position: fixed;
+  display: flex;
+  cursor: pointer;
+  z-index: 105;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  bottom: 30px;
+  right: 7px;
+  background-color: var(--kt-scrolllead-bg-color);
+  box-shadow: var(--kt-scrolllead-box-shadow);
+  opacity: var(--kt-scrolllead-opacity-on);
+  transition: color 0.2s ease;
+  border-radius: 0.475rem;
+}
+.scrolllead .svg-icon {
+  color: var(--kt-scrolllead-icon-color);
+}
+.scrolllead .svg-icon svg {
+  height: 38px;
+  width: 38px;
+}
+.scrolllead > i {
+  font-size: 2.37rem;
+  color: var(--kt-scrolllead-icon-color);
+}
+.scrolllead:hover {
+  background-color: var(--kt-scrolllead-bg-color-hover);
+}
+.scrolllead:hover .svg-icon,
+.scrolllead:hover i {
+  color: var(--kt-scrolllead-icon-color-hover);
+}
+.scrolllead:hover {
+  transition: color 0.2s ease;
+  opacity: var(--kt-scrolllead-opacity-hover);
+}
+
+@media (max-width: 991.98px) {
+  .scrolllead {
+    bottom: 23px;
+    right: 5px;
+    width: 44px;
+    height: 44px;
+  }
+}

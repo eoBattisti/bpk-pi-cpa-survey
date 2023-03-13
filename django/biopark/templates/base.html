@@ -1,0 +1,116 @@
+{% load compress static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <title>{% block html-title %}Biopark{% endblock html-title %}{% block html-subtitle %}{% endblock html-subtitle %}</title>
+    <meta charset="utf-8" />
+    {% block metatags %}
+      <meta name="description" content="O BPK Search tem como objetivo auxiliar na conexão entre as empresas parceiras do Biopark e potenciais clientes, disponibilizando de forma fácil e rápida um meio de consulta para encontrar os produtos e serviços realizados e/ou feitos por cada empresa. O sistema permite às empresas divulgar seus produtos e serviços, bem como encontrar produtos e serviços de outras empresas do nosso ecossistema." />
+      <meta name="keywords" content="biopark, search, bioparksearch" />
+    {% endblock metatags %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="BPK Search | Plataforma de busca do Biopark" />
+    <meta property="og:url" content="https://biopark.com.br/" />
+    <meta property="og:site_name" content="BPK Search | Biopark" />
+    <link rel="canonical" href="https://biopark.com.br/" />
+    <link rel="shortcut icon" href="{% static 'media/logos/bpk-favicon.ico' %}" />
+
+    {% compress css %}
+      {% block css-custom %}
+        <link href="{% static 'css/custom_header.css' %}" rel="stylesheet">
+        <link href="{% static 'plugins/custom/fullcalendar/fullcalendar.bundle.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'plugins/custom/datatables/datatables.bundle.css' %}" rel="stylesheet" type="text/css" />
+      {% endblock css-custom %}
+
+      <link href="{% static 'plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+      <link href="{% static 'css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+    {% endcompress %}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+
+    <style>
+      .custom-errorlist .errorlist{
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .custom-errorlist .errorlist li{
+        list-style: none;
+      }
+    </style>
+
+    {% compress css %}{% block css-import %}{% endblock css-import %}{% endcompress %}
+    {% compress css inline %}{% block css-inline %}{% endblock css-inline %}{% endcompress %}
+  </head>
+  <body id="kt_app_body" {% if request.user.is_authenticated %}data-kt-app-layout="dark-header"{% else %}data-kt-app-layout="light-header"{% endif %} data-kt-app-header-fixed="true" data-kt-app-toolbar-enabled="true" class="app-default">
+    <script>
+      let languagesDataTable = {
+        'pt-br': {
+          loadingRecords: `
+            <div class="spinner-border text-secondary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          `,
+          info: "Mostrando _START_ até _END_ de _TOTAL_ itens",
+          infoEmpty: "Sem itens",
+          zeroRecords: "Nenhum registro encontrado.",
+          emptyTable: `<div class="fs-7 text-gray-600">Nenhum registro encontrado.</div>`,
+        },
+      };
+
+      let blankAvatar = `{% static 'media/avatars/blank.png' %}`;
+    </script>
+
+    {% block layout %}{% endblock layout %}
+
+    <script>var hostUrl = "assets/";</script>
+
+    {% compress js %}
+      <!-- Global JavaScript -->
+      <script src="{% static 'plugins/global/plugins.bundle.js' %}"></script>
+      <script src="{% static 'js/scripts.bundle.js' %}"></script>
+
+      {% block js-vendors %}
+        <!-- Vendors -->
+        <script src="{% static 'plugins/custom/fullcalendar/fullcalendar.bundle.js' %}"></script>
+        <script src="{% static 'plugins/custom/datatables/datatables.bundle.js' %}"></script>
+        <script src="{% static 'plugins/custom/ckeditor/ckeditor-classic.bundle.js' %}"></script>
+        <script src="{% static 'plugins/custom/fslightbox/fslightbox.bundle.js' %}"></script>
+        <script src="{% static 'plugins/custom/draggable/draggable.bundle.js' %}"></script>
+      {% endblock js-vendors %}
+
+      {% block js-custom %}
+        <!-- Custom js -->
+        <script src="{% static 'js/widgets.bundle.js' %}"></script>
+        <script src="{% static 'js/custom/widgets.js' %}"></script>
+      {% endblock js-custom %}
+    {% endcompress %}
+
+    {% block js-vendors-non-static %}
+      <!-- Vendors non-static -->
+      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+    {% endblock js-vendors-non-static %}
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+    <script src="https://d3js.org/d3-scale.v1.min.js"></script>
+
+    {% block js-notification %}{% endblock js-notification %}
+    {% compress js %}{% block js-import %}{% endblock js-import %}{% endcompress %}
+    {% compress js inline %}{% block js-inline %}{% endblock js-inline %}{% endcompress %}
+  </body>
+</html>

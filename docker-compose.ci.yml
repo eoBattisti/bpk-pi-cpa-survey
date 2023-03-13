@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:12
+    container_name: bpk_search_db
+    env_file:
+      - ./envs/postgres.env
+
+  django:
+    build:
+      context: ./django
+      target: biopark
+      args:
+        MODE: ci
+    container_name: bpk_search_django
+    env_file:
+      - ./envs/postgres.env
+    volumes:
+      - ./django/:/code/
+    working_dir: /code
+    environment:
+      MODE: ci
+      LOGS_ROOT: /code/logs/development
+    command: ["./docker/wait_db.sh", "./docker/ci.sh"]
+    depends_on:
+      - postgres
+      - memcached

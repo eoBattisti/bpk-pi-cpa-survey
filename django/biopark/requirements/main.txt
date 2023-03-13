@@ -1,0 +1,14 @@
+Django==4.1
+psycopg2==2.9.3
+django-extensions==3.2.1
+django-compressor==4.1
+django-widget-tweaks==1.4.12
+djangorestframework==3.14.0
+djangorestframework-datatables==0.6.0
+django-filter==21.1
+Pillow==9.2.0
+crispy-bootstrap5==0.6
+django-auditlog==2.1.1
+python-memcached==1.59
+pymemcache==4.0.0
+yake==0.4.8

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block layout %}
+    {% include 'partials/theme-mode/_init.html' %}
+    {% block layout-style %}{% endblock %}
+    {% include 'partials/_scrolltop.html' %}
+    {% block modal %}{% endblock modal %}
+{% endblock layout %}
+
+{% block js-notification %}
+    {% if request.user.is_authenticated %}
+        <script src="{% static 'js/notification_menu.js' %}"></script>
+    {% endif %}
+{% endblock js-notification %}

@@ -1,0 +1,16 @@
+-r ./main.txt
+bandit==1.7.4
+behave-django==1.4.0
+coverage==6.4.4
+dodgy==0.2.1
+factory-boy==3.2.1
+flake8
+mock==4.0.3
+pep8-naming==0.10.0
+pep8==1.7.1
+prospector==1.7.7
+pycycle==0.0.8
+pylint-django==2.5.3
+pylint==2.15.2
+python-taint==0.42
+safety==1.10.3

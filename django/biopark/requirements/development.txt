@@ -1,0 +1,6 @@
+-r ./main.txt
+-r ./ci.txt
+behave-django==1.4.0
+ipython==8.5.0
+isort==5.10.1
+django-debug-toolbar==3.7.0

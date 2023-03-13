@@ -1,0 +1,7 @@
+.image-input-placeholder {
+  background-image: url("/static/media/svg/files/blank-image.svg");
+}
+
+[data-theme="dark"] .image-input-placeholder {
+  background-image: url("/static/media/svg/files/blank-image-dark.svg");
+}

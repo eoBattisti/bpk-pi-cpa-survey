@@ -1,0 +1,8 @@
+.word-text {
+  cursor: pointer; pointer-events: auto !important;
+  user-select: none;
+  transition: all 0.3 ease-in-out;
+}
+.word-text:hover {
+  fill: #009ef7 !important;
+}

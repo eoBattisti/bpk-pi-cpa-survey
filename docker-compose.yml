@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: bpk_search_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  memcached:
+    image: memcached:1.6
+    container_name: bpk_search_cache
+
+  django:
+    container_name: bpk_search_django
+    working_dir: /code
+    command: ["./docker/wait_db.sh", "./docker/start.sh"]
+    depends_on:
+      - postgres
+      - memcached
+
+volumes:
+  postgres_data:

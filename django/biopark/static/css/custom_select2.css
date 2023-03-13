@@ -1,0 +1,8 @@
+.select2-container--disabled .select2-selection {
+	cursor: default !important;
+  background-color: #d9e0e6 !important;
+}
+
+.select2-multiselect-primary .select2-selection__choice {
+  color: red;
+}

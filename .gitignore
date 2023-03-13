@@ -1,0 +1,21 @@
+*~
+*.gz
+*.pye
+*.pyc
+*.sqlite3
+*.mo
+**/__pycache__/
+*.html.py
+.python-version
+.coverage
+.vscode
+.idea
+# secret_key.txt
+cover
+HASH
+
+.devcontainer
+venv/
+
+django/biopark/media/*
+django/biopark/public_static/*

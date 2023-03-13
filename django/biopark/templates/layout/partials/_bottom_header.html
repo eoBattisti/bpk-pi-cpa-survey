@@ -1,0 +1,16 @@
+{% load static %}
+
+<div id="kt_app_header" class="app-header app-bottom-header margin-bottom-header z-index-bottom-header">
+  <div class="app-container container-xxl d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
+    <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
+      <a class="invisible">
+        <img alt="Logo" src="{% static 'media/logos/biopark-default.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-light-show" />
+        <img alt="Logo" src="{% static 'media/logos/biopark-default-dark.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-dark-show" />
+      </a>
+    </div>
+    <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_bottom_header_wrapper">
+      {% include 'layout/partials/header/_menu/_bottom_menu.html' %}
+      {% include 'layout/partials/header/_bottom_navbar.html' %}
+    </div>
+  </div>
+</div>
