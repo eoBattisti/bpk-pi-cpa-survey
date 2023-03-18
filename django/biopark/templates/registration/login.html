@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-{% load static random_num %}
+{% load static  %}
 
 {% block layout-style %}
   <div class="d-flex flex-column flex-root" id="kt_app_root">
@@ -65,14 +65,8 @@
           </div>
         </div>
       </div>
-      <!-- Aside -->
-      {% random_num 2 as rand %}
-      <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-           {% if rand %}
-           style="background-image: url({% static 'media/login/logm.png' %})"
-           {% else %}
-           style="background-image: url({% static 'media/login/logw.png' %})"
-           {% endif %}
+      <!-- Aside -->    <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
+        
            >
       </div>
     </div>
