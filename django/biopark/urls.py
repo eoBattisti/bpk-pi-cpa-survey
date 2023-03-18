@@ -8,10 +8,11 @@ from biopark import views
 
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='home'),
-    path('admin/', admin.site.urls),
-    path('api/', include('biopark.api_urls')),
-    path("eixos/", include('axis.urls')),
+    path("", views.HomeView.as_view(), name='home'),
+    path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("api/", include("biopark.api_urls")),
+    path("eixos/", include("axis.urls")),
     path("eixos/listar/", views.EixosList.as_view())
 ]
 
