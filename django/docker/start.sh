@@ -19,10 +19,12 @@ python manage.py migrate
 echo "Migrated!"
 
 echo "Loading fixtures..."
-# python manage.py loaddata **/fixtures/default/*.json
-# if [ "$MODE" = "development" ]; then
-#     python manage.py loaddata **/fixtures/*.json
-# fi
+if [ "$MODE" = "production"]; then
+    python manage.py loaddata **/fixtures/default/*.json
+fi
+if [ "$MODE" = "development" ]; then
+    python manage.py loaddata **/fixtures/*.json
+fi
 echo "Loaded!"
 
 

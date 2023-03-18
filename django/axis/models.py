@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 from core.models import BaseModel
 
-# Create your models here.
+
 class Axle(BaseModel):
 
     name = models.CharField(verbose_name=_("Name"), max_length=50)

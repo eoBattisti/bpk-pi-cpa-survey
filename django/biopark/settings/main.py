@@ -25,7 +25,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ['http://localhost']
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
 
 APP_NAME = "BPK Survey"
 
@@ -52,7 +52,11 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'axis'
+    'core',
+    'axis',
+    'exams',
+    'questions',
+    'users'
 ]
 
 

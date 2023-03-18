@@ -1,11 +1,6 @@
-# pylint: disable=too-many-return-statements
 """Biopark views for Biopark Search project."""
-import datetime
-import pytz
 from django.views.generic import TemplateView, RedirectView
-from django.http import  Http404
-
-
+from django.http import Http404
 
 
 class HomeView(RedirectView):
@@ -19,7 +14,11 @@ class HomeView(RedirectView):
 
         raise Http404
 
+
 class EixosList(TemplateView):
+    """
+    TemplateView de exemplo
+    """
     template_name = 'prepages/eixos/index.html'
 
 
