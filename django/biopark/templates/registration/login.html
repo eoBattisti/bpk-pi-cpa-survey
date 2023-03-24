@@ -11,8 +11,10 @@
             <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" method="POST" action="#">
               {% csrf_token %}
               <div class="text-center mb-11">
-                <h1 class="text-dark fw-bolder mb-3">Entre</h1>
-                <div class="text-gray-500 fw-semibold fs-6">Acesse a área residente</div>
+                <h1 class="text-dark mb-3 fs-3x" data-kt-translate="password-reset-title">Bem-Vindo!</h1>
+                <div class="text-gray-400 fw-semibold fs-6" data-kt-translate="password-reset-desc">
+                  Digite seus dados para entrar no sistema
+                </div>
               </div>
               {% if form.non_field_errors %}
                 <div class="alert alert-dismissible bg-danger d-flex flex-column flex-sm-row p-5 mb-10">
@@ -38,11 +40,11 @@
                 </div>
               {% endif %}
               <div class="fv-row mb-8 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                <input type="text" placeholder="Username" name="username" autocomplete="off" class="form-control bg-transparent" />
+                <input type="text" placeholder="Usuário" name="username" autocomplete="off" class="form-control bg-transparent" />
                 <div class="fv-plugins-message-container invalid-feedback">{{ form.username.errors }}</div>
               </div>
               <div class="fv-row mb-3 fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
-                <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent" />
+                <input type="password" placeholder="Senha" name="password" autocomplete="off" class="form-control bg-transparent" />
                 <div class="fv-plugins-message-container invalid-feedback">{{ form.password.errors }}</div>
               </div>
               <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
@@ -52,22 +54,26 @@
               <div class="row mb-10">
                 <div class="col">
                   <button type="submit" id="kt_sign_in_submit" class="btn btn-primary w-100">
-                    <span class="indicator-label">Acesse</span>
+                    <span class="indicator-label">Entrar</span>
                     <span class="indicator-progress">Espere...
                     <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                   </button>
                 </div>
-                <div class="col">
-                  <a href="{% url 'home' %}" class="btn btn-bg-secondary btn-color-gray-700 btn-active-text-primary w-100">Voltar</a>
-                </div>
               </div>
             </form>
+            <div class="text-center">
+              <!--begin::Title-->
+              <img alt="Logo" src="{% static 'media/custom/cpabpk.png' %}" class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-175px ">
+              <!--end::Title-->
+          </div>
           </div>
         </div>
       </div>
-      <!-- Aside -->    <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-        
-           >
+      <!-- Aside -->   
+       <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2">
+        <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
+          <img alt="Logo" src="{% static 'media/custom/loginn.png' %}" class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px ">
+        </div>
       </div>
     </div>
   </div>

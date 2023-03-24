@@ -2,7 +2,7 @@ FROM python:3.8-slim as builder
 
 RUN apt-get update --fix-missing
 
-RUN apt-get -y install sudo vim postgresql-client make libpq-dev python3-dev build-essential gcc gettext
+RUN apt-get install -y sudo vim postgresql-client make libpq-dev python3-dev build-essential gcc gettext
 
 RUN apt-get -y autoremove && apt-get -y autoclean
 
