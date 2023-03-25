@@ -3,7 +3,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
 from biopark import views
 
 
@@ -14,7 +13,7 @@ urlpatterns = [
     path("api/", include("biopark.api_urls")),
     path("eixos/", include("axis.urls")),
     path("eixos/listar/", views.EixosList.as_view()),
-    path("perguntas/",include('questions.urls'))
+    path("perguntas/", include('questions.urls'))
 ]
 
 
