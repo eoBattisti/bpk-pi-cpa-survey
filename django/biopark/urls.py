@@ -13,7 +13,8 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("biopark.api_urls")),
     path("eixos/", include("axis.urls")),
-    path("eixos/listar/", views.EixosList.as_view())
+    path("eixos/listar/", views.EixosList.as_view()),
+    path("perguntas/",include('questions.urls'))
 ]
 
 
