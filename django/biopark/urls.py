@@ -27,6 +27,7 @@ urlpatterns = [
     path("importar/alunos/", views.ImportarAlunos.as_view(), name='alunos'),
     path("relatórios/professores/", views.ImportarProfessores.as_view(), name='professores')
     path("perguntas/",include('questions.urls'))
+    path("perguntas/", include('questions.urls'))
 ]
 
 
