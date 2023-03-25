@@ -24,4 +24,3 @@ class QuestionsUpdateView(UpdateView):
     template_name = 'form/questions_editor.html'
     form_class = QuestionForm
     success_url = reverse_lazy("questions:list")
-
