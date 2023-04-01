@@ -5,11 +5,8 @@
     <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
       <a href="{% url 'home' %}">
         {% if request.user.is_authenticated %}
-          <img alt="Logo" src="{% static 'media/logos/biopark-default-dark.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-light-show" />
-          <img alt="Logo" src="{% static 'media/logos/biopark-default-dark.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-dark-show" />
-        {% else %}
-          <img alt="Logo" src="{% static 'media/logos/biopark-default.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-light-show" />
-          <img alt="Logo" src="{% static 'media/logos/biopark-default-dark.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-dark-show" />
+          <img alt="Logo" src="{% static 'media/custom/bpk.png' %}" class="h-30px h-lg-40px app-sidebar-logo-default" />
+          {% comment %} <img alt="Logo" src="{% static 'media/logos/biopark-default-dark.png' %}" class="h-30px h-lg-60px app-sidebar-logo-default theme-dark-show" /> {% endcomment %}
         {% endif %}
       </a>
     </div>

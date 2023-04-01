@@ -46,7 +46,7 @@
     {% compress css %}{% block css-import %}{% endblock css-import %}{% endcompress %}
     {% compress css inline %}{% block css-inline %}{% endblock css-inline %}{% endcompress %}
   </head>
-  <body id="kt_app_body" {% if request.user.is_authenticated %}data-kt-app-layout="dark-header"{% else %}data-kt-app-layout="light-header"{% endif %} data-kt-app-header-fixed="true" data-kt-app-toolbar-enabled="true" class="app-default">
+  <body id="kt_app_body" data-kt-app-layout="light-header" data-kt-app-header-fixed="true" data-kt-app-toolbar-enabled="true" class="app-default">
     <script>
       let languagesDataTable = {
         'pt-br': {

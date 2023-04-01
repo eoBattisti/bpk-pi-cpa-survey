@@ -1,25 +1,83 @@
 """Biopark views for Biopark Search project."""
 from django.views.generic import TemplateView, RedirectView
 from django.http import Http404
+from django.urls import reverse_lazy
+from users.models import User
 
-
-class HomeView(RedirectView):
+class InitialView(RedirectView):
     """
     Home page
     """
     def get_redirect_url(self, *args, **kwargs):
-        """
-        Redirect users to correct home page.
-        """
+        user = User.objects.filter(pk=self.request.user.pk).first()
 
-        raise Http404
+        if not user:
+            return reverse_lazy("login")
+        return reverse_lazy("home")
 
+
+class HomeView(TemplateView):
+    template_name = 'prepages/home/home.html'
+
+class PerguntasList(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/perguntas/ListagemPerguntas.html'
+
+class PerguntasCad(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/perguntas/CadastroPerguntas.html'
+
+class AvaliacaoList(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/avaliacao/ListagemAvaliacao.html'
+
+class AvaliacaoCad(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/avaliacao/CriarAvaliacao.html'
 
 class EixosList(TemplateView):
     """
     TemplateView de exemplo
     """
-    template_name = 'prepages/eixos/index.html'
+    template_name = 'prepages/eixos/ListagemEixos.html'
+
+class EixosCad(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/eixos/CadastroEixos.html'
+
+class Instituicao(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/instituicao/instituicao.html'
+
+class Relatorios(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/relatorios/relatorios.html'
+
+class ImportarAlunos(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/importar/alunos.html'
+
+class ImportarProfessores(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'prepages/importar/professores.html'
 
 
 class Handler400View(TemplateView):

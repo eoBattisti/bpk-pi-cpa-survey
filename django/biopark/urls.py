@@ -8,12 +8,23 @@ from biopark import views
 
 
 urlpatterns = [
-    path("", views.HomeView.as_view(), name='home'),
+    path("", views.InitialView.as_view(), name='initial'),
+    path("home/", views.HomeView.as_view(), name='home'),
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("biopark.api_urls")),
     path("eixos/", include("axis.urls")),
-    path("eixos/listar/", views.EixosList.as_view())
+    path("eixos/listar/", views.EixosList.as_view()),
+    path("perguntas/listagem/", views.PerguntasList.as_view(), name='ListagemPerguntas'),
+    path("perguntas/cadastro/", views.PerguntasCad.as_view(), name='CadastroPerguntas'),
+    path("avaliação/listagem/", views.AvaliacaoList.as_view(), name='ListagemAvaliacao'),
+    path("avaliação/criar/", views.AvaliacaoCad.as_view(), name='CriarAvaliacao'),
+    path("eixos/listagem/", views.EixosList.as_view(), name='ListagemEixos'),
+    path("eixos/cadastro/", views.EixosCad.as_view(), name='CadastroEixos'),
+    path("instituições/", views.Instituicao.as_view(), name='instituicao'),
+    path("relatórios/", views.Relatorios.as_view(), name='relatorios'),
+    path("importar/alunos/", views.ImportarAlunos.as_view(), name='alunos'),
+    path("relatórios/professores/", views.ImportarProfessores.as_view(), name='professores')
 ]
 
 
