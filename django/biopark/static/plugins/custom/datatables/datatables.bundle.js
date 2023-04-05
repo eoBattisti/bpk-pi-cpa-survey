@@ -11634,12 +11634,12 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "emptyTable": "No data available in table"
+			 *          "emptyTable": "Sem dados disponíveis! "
 			 *        }
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Sem dados disponíveis!",
 	
 	
 			/**
@@ -11671,7 +11671,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Showing _START_ de _END_ of _TOTAL_ entries",
 	
 	
 			/**
@@ -15774,8 +15774,8 @@ return DataTable;
 
 var defaults = {
 	"language": {		
-		"info": "Showing _START_ to _END_ of _TOTAL_ records",
-    	"infoEmpty": "Showing no records",
+		"info": "Mostrando _START_ de _END_ até _TOTAL_ registros",
+    	"infoEmpty": "Sem dados registrados",
 		"lengthMenu": "_MENU_",
 		"processing": '<span class="spinner-border w-15px h-15px text-muted align-middle me-2"></span> <span class="text-gray-600">Loading...</span>',
 		"paginate": {

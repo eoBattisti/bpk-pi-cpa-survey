@@ -1,7 +1,7 @@
 """Biopark views for Biopark Search project."""
 from django.views.generic import TemplateView, RedirectView
 from django.http import Http404
-
+from django.shortcuts import render
 
 class HomeView(RedirectView):
     """
@@ -13,13 +13,6 @@ class HomeView(RedirectView):
         """
 
         raise Http404
-
-
-class EixosList(TemplateView):
-    """
-    TemplateView de exemplo
-    """
-    template_name = 'prepages/eixos/index.html'
 
 
 class Handler400View(TemplateView):
@@ -48,3 +41,4 @@ class Handler403View(TemplateView):
     Handler 403 view.
     """
     template_name = 'handler/403.html'
+
