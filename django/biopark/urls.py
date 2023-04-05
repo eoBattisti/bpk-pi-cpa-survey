@@ -13,7 +13,7 @@ urlpatterns = [
     path("api/", include("biopark.api_urls")),
     path("eixos/", include("axis.urls")),
     path("perguntas/", include('questions.urls'))
-    
+
 ]
 
 

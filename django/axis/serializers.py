@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from axis.models import Axle
 
+
 class AxleSerializer(serializers.ModelSerializer):
 
     class Meta:
