@@ -1,6 +1,5 @@
 """Biopark views for Biopark Search project."""
 from django.views.generic import TemplateView, RedirectView
-from django.http import Http404
 from django.urls import reverse_lazy
 from users.models import User
 
@@ -19,11 +18,13 @@ class InitialView(RedirectView):
 class HomeView(TemplateView):
     template_name = 'prepages/home/home.html'
 
+
 class PerguntasList(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/perguntas/ListagemPerguntas.html'
+
 
 class PerguntasCad(TemplateView):
     """
@@ -31,11 +32,13 @@ class PerguntasCad(TemplateView):
     """
     template_name = 'prepages/perguntas/CadastroPerguntas.html'
 
+
 class AvaliacaoList(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/avaliacao/ListagemAvaliacao.html'
+
 
 class AvaliacaoCad(TemplateView):
     """
@@ -43,11 +46,13 @@ class AvaliacaoCad(TemplateView):
     """
     template_name = 'prepages/avaliacao/CriarAvaliacao.html'
 
+
 class EixosList(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/eixos/ListagemEixos.html'
+
 
 class EixosCad(TemplateView):
     """
@@ -55,11 +60,13 @@ class EixosCad(TemplateView):
     """
     template_name = 'prepages/eixos/CadastroEixos.html'
 
+
 class Instituicao(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/instituicao/instituicao.html'
+
 
 class Relatorios(TemplateView):
     """
@@ -67,17 +74,20 @@ class Relatorios(TemplateView):
     """
     template_name = 'prepages/relatorios/relatorios.html'
 
+
 class ImportarAlunos(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/importar/alunos.html'
 
+
 class ImportarProfessores(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/importar/professores.html'
+
 
 
 class Handler400View(TemplateView):
