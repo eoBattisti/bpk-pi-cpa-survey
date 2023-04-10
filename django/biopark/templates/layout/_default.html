@@ -7,10 +7,6 @@
     <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
       {% include 'layout/partials/_header.html' %}
 
-      {% if request.user.is_authenticated %}
-        {% include 'layout/partials/_bottom_header.html' %}
-      {% endif %}
-
       <div class="app-wrapper flex-column flex-row-fluid {% if request.user.is_authenticated %}margin-content{% endif %}" id="kt_app_wrapper">
         <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
           <div class="d-flex flex-column flex-column-fluid">

@@ -1,6 +1,6 @@
 {% load static %}
 
-<div id="kt_notification_menu" class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" data-api="{% url 'api:notifications-list' %}" data-csrf="{{ csrf_token }}" data-url-list="{% url 'notifications:list' %}" data-user-id="{{ request.user.id }}">
+<div id="kt_notification_menu" class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" data-api="" data-csrf="" data-url-list="" data-user-id="{{ request.user.id }}">
   <!-- Header -->
   <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url({% static 'media/misc/menu-header-bg.jpg' %})">
     <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notificações
@@ -35,7 +35,7 @@
       </div>
 
       <div class="py-3 text-center border-top">
-        <a href="{% url 'notifications:list' %}" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
+        <a href="#" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
           <span class="svg-icon svg-icon-5">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
@@ -56,7 +56,7 @@
       </div>
 
       <div class="py-3 text-center border-top">
-        <a href="{% url 'notifications:list' %}" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
+        <a href="" class="btn btn-color-gray-600 btn-active-color-primary">Visualizar todos
           <span class="svg-icon svg-icon-5">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
