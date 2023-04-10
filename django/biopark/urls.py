@@ -14,6 +14,7 @@ urlpatterns = [
     path("api/", include("biopark.api_urls")),
     path("eixos/", include("axis.urls")),
     path("eixos/listar/", views.EixosList.as_view()),
+
     path("perguntas/listagem/", views.PerguntasList.as_view(), name='ListagemPerguntas'),
     path("perguntas/cadastro/", views.PerguntasCad.as_view(), name='CadastroPerguntas'),
     path("avaliação/listagem/", views.AvaliacaoList.as_view(), name='ListagemAvaliacao'),
@@ -36,6 +37,7 @@ urlpatterns = [
     path("relatórios/", views.Relatorios.as_view(), name='relatorios'),
     path("importar/alunos/", views.ImportarAlunos.as_view(), name='alunos'),
     path("relatórios/professores/", views.ImportarProfessores.as_view(), name='professores')
+    path("perguntas/", include('questions.urls'))
 ]
 
 
