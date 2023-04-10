@@ -13,56 +13,48 @@
           <li class="breadcrumb-item">
             <span class="bullet bg-gray-400 w-5px h-2px"></span>
           </li>
-          <li class="breadcrumb-item text-muted">Editor</li>
+          <li class="breadcrumb-item text-muted">Cadastro</li>
         </ul>
       </div>
       <div class="d-flex align-items-center gap-2 gap-lg-3">
-        <a href="http://localhost:8000/eixos/list/" class="btn btn-sm fw-bold btn-primary">Voltar</a>
+        <a href="http://localhost:8000/eixos/listar/" class="btn btn-sm fw-bold btn-primary">Voltar</a>
       </div>
     </div>
   </div>
 {% endblock toolbar %}
 
 {% block content %}
-<form method="post" id="form_confirm">
-<div>
 <div id="kt_app_content" class="app-content flex-column-fluid">
   <div id="kt_app_content_container" class="app-container container-xxl">
     <form id="kt_company_editor_form" class="form" method="post" enctype="multipart/form-data" novalidate>
       {% csrf_token %}
+      <!--begin::Input group-->
     <div class="input-group mb-5">
       <span class="input-group-text" id="basic-addon1">Nome do eixo</span>
-      {{ form.name|add_class:"form-control" }}
+      <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1"/>
     </div>
+    
+    <!--end::Input group-->
+    
+<!--begin::solid autosize textarea-->
 <div>
   <label for="" class="form-label">Descrição</label>
-  <div style="bg-color blue" class="col-height" >
-    {{ form.description|add_class:"form-control mb-5"}}
-  </div>
+  <textarea placeholder="Descrição" class="form-control mb-5" data-kt-autosize="true"></textarea>
 </div>
-</form>
-    </form >
-    <div class="border-start 50 d-flex align-items-center gap-2 gap-lg-4" style="margin-left: 1220px;">
-      <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
-        <div class="w-10px d-flex justify-content-end align-items-center gap-2 gap-lg-3" >
-          <button type="button" id="CancelarCadastroEixo" class="btn btn-sm btn-danger btn-primary">Cancelar</button>
-          <button type="button" id="AdicionarEixo" class="btn btn-sm fw-bold btn-primary">Confirmar</button>
-          <button type="submit" name="id_submiteixo_name" style="display: none;"></button>
-        </div>
-      </div>
+<!--end::solid autosize textarea-->
+
+    </form>
+    <div class="border-start 10 d-flex align-items-center gap-2 gap-lg-3">
+      <button type="button" id="AdicionarCadastroEixo" class="btn btn-sm fw-bold btn-primary">Adicionar</button>
+      <button type="button" id="CancelarCadastroEixo" class="btn btn-sm btn-danger btn-primary">Cancelar</button>
     </div>
   </div>
 </div>
-</form>
-</div>
-
-
-
 
 
 {% endblock content %}
 
 
 {% block js-import %}
-  <script src="{% static 'js/form/axle_form.js' %}"></script>
+  <script src="{% static 'js/test.js' %}"></script>
 {% endblock js-import %}
