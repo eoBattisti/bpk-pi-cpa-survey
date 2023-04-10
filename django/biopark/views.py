@@ -3,6 +3,7 @@ from django.views.generic import TemplateView, RedirectView
 from django.urls import reverse_lazy
 from users.models import User
 
+
 class InitialView(RedirectView):
     """
     Home page
@@ -87,7 +88,6 @@ class ImportarProfessores(TemplateView):
     TemplateView de exemplo
     """
     template_name = 'prepages/importar/professores.html'
-
 
 
 class Handler400View(TemplateView):
