@@ -1,6 +1,5 @@
 """Biopark views for Biopark Search project."""
 from django.views.generic import TemplateView, RedirectView
-from django.http import Http404
 from django.urls import reverse_lazy
 from users.models import User
 
@@ -89,6 +88,7 @@ class ImportarProfessores(TemplateView):
     TemplateView de exemplo
     """
     template_name = 'prepages/importar/professores.html'
+
 
 
 class Handler400View(TemplateView):
