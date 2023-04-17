@@ -1,9 +1,7 @@
 from django.views.generic import ListView, CreateView, UpdateView
-
 from django.urls import reverse_lazy
 
 from axis.forms import AxleForm
-
 from axis.models import Axle
 
 

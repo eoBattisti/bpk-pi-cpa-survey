@@ -13,6 +13,7 @@
         </div>
 
         <div class="d-flex align-items-center gap-2 gap-lg-3">
+            <a type="button"data-bs-toggle="modal" data-bs-target="#kt_modal_1" class="btn btn-sm fw-bold btn-success">Importar</a>
             <a href="{% url 'axis:create' %}" class="btn btn-sm fw-bold btn-primary">Adicionar novo eixo</a>
         </div>
     </div>
@@ -132,9 +133,11 @@
         </div>
     </div>
 </div>
+{% include 'modal/axle_import.html' %}
 {% endblock %}
 
 {% block js-import %}
+<script src="{% static 'js/form/axle_import.js' %}"></script>
 <script src="{% static 'js/init_toastr.js' %}"></script>
 <script src="{% static 'js/list/axle_list.js' %}"></script>
 {% endblock js-import %}
