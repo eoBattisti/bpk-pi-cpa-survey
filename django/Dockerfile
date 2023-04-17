@@ -1,10 +1,9 @@
 FROM python:3.8-slim as builder
 
-RUN apt-get update --fix-missing
-
-RUN apt-get install -y sudo vim postgresql-client make libpq-dev python3-dev build-essential gcc gettext
-
-RUN apt-get -y autoremove && apt-get -y autoclean
+RUN apt-get update --fix-missing \
+    && apt-get install -y sudo vim postgresql-client make libpq-dev python3-dev \
+    build-essential gcc gettext \
+    && apt-get -y autoremove && apt-get -y autoclean
 
 ARG USERNAME=biopark
 ARG USER_UID=1000
