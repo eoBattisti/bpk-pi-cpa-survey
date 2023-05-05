@@ -24,7 +24,7 @@
 {% endblock toolbar %}
 
 {% block content %}
-<form method="post" id="form_confirm">
+<form method="post" id="form_confirm_questions">
   <div>
     <div id="kt_app_content" class="app-content flex-column-fluid">
       <div id="kt_app_content_container" class="app-container container-xxl">
@@ -39,20 +39,20 @@
               <div class="d-flex justify-content-end">
                 <div class="flex-row-fluid me-5">
                   <label for="" class="form-label">Eixo:</label>
-                  {{ form.axis|add_class:"form-select" }}
-                  </select>
+                  {{ form.axis|add_class:"form-select mb-2" }}
+                    <span class="mt-1" id="erro1"></span>
                 </div>
 
                 <div class="flex-row-fluid me-5">
                   <label for="" class="form-label">Tipo de Resposta:</label>
                   {{ form.answer_type|add_class:"form-select" }}
-                  </select>
                 </div>
               </div>
               <div class="flex-row-fluid pt-5">
                 <label for="" class="form-label">Descrição:</label>
                 <div style="bg-color blue" class="col-height">
-                  {{ form.description|add_class:"form-control mb-5"}}
+                  {{ form.description|add_class:"form-control mb-2"}}
+                  <span id="erro2"></span>
                 </div>
               </div>
             </form>
@@ -62,9 +62,9 @@
 <div class="border-start 50 d-flex align-items-center gap-2 gap-lg-4" style="margin-left: 1220px;">
   <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
     <div class="w-10px d-flex justify-content-end align-items-center gap-2 gap-lg-3">
-      <button type="button" id="CancelarCadastroEixo" class="btn btn-sm btn-danger btn-primary">Cancelar</button>
-      <button type="button" id="AdicionarPergunta" class="btn btn-sm fw-bold btn-primary">Confirmar</button>
-      <button type="submit" name="id_submitpergunta_name" style="display: none;"></button>
+      <button type="button" id="CancCad" class="btn btn-sm btn-danger btn-primary">Cancelar</button>
+      <button type="button" id="AddPerg" class="btn btn-sm fw-bold btn-primary">Confirmar</button>
+      <button type="submit" name="id_submitperg_name" style="display: none;"></button>
     </div>
   </div>
 </div>
@@ -72,8 +72,6 @@
 </div>
 </form>
 </div>
-
-
 {% endblock content %}
 
 {% block js-import %}

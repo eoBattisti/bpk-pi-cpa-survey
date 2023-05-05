@@ -12,6 +12,7 @@ $("#kt_datatable_fixed_columns").DataTable({
 //TABELA DE EIXO SCROLLBAR
 
 //DESEJA APAGAR O EIXO CADASTRADO?
+
 const excluirpergunta = document.getElementById('ApagarPergunta');
 
 excluirpergunta.addEventListener('click', e =>{

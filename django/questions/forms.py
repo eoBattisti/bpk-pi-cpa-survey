@@ -1,8 +1,8 @@
+from typing import Any, Dict
 from crispy_forms.helper import FormHelper
 
 from django import forms
 from questions.models import Question
-
 
 class QuestionForm(forms.ModelForm):
 
@@ -15,7 +15,4 @@ class QuestionForm(forms.ModelForm):
         self.helper = FormHelper()
         self.fields['axis'].widget.attrs['data-control'] = 'select2'
         self.fields['axis'].widget.attrs['data-placeholder'] = 'Selecione um eixo'
-
-
-
     
