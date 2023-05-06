@@ -1,1 +1,11 @@
-first_name,last_name,e-mail,birthdate,cpf,ra,role,cpa_member,area
+first_name,last_name,e-mail,birthdate,cpf,ra,cpa_member,role,area,classroom
+Amanda,Santos,amanda.santos@biopark.com,14021994,12345678901,12345,0,Professor,Curso,A-101
+Bruno,Silva,bruno.silva@biopark.com,11051992,10987654321,54321,0,Aluno,Curso,A-102
+Camila,Rocha,camila.rocha@biopark.com,05091980,01234567890,24680,1,Coordenador,Direção,Office-1
+Diego,Gomes,diego.gomes@biopark.com,30061988,45678901234,13579,0,Professor,Curso,A-103
+Eduarda,Almeida,eduarda.almeida@biopark.com,22081999,09876543210,97531,0,Aluno,Curso,A-104
+Fábio,Oliveira,fabio.oliveira@biopark.com,01011975,56789012345,35791,0,Funcionario,Financeiro,Office-2
+Gabriela,Mendes,gabriela.mendes@biopark.com,20022000,65432109876,86420,1,Professor,Curso,B-201
+Hugo,Carvalho,hugo.carvalho@biopark.com,13111989,54321098765,24680,0,Aluno,Curso,B-202
+Isabela,Barbosa,isabela.barbosa@biopark.com,07071987,09876543210,75391,0,Funcionario,Cantina,Office-3
+João,Vieira,joao.vieira@biopark.com,25041996,12345678901,15973,0,Professor,Curso,B-203
