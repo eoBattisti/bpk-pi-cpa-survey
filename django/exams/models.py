@@ -38,7 +38,7 @@ class ExamQuestion(BaseModel):
     """ Model para fazer a ligação n -> n de avaliações e perguntas"""
     exam = models.ForeignKey("exams.Exam",
                              verbose_name=_("Exam"),
-                             related_name="answers",
+                             related_name="questions",
                              on_delete=models.CASCADE)
     question = models.ForeignKey("questions.Question",
                                  verbose_name=_("Question"),
