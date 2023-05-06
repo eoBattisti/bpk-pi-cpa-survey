@@ -13,6 +13,7 @@ def create_teachers(command):
 
     command.cache['teachers'] = teachers
 
+
 def create_employees(command):
     command.print('Creating employees...')
 
@@ -24,6 +25,7 @@ def create_employees(command):
 
     command.cache['employees'] = employees
 
+
 def create_coordenators(command):
     command.print('Creating coordenators...')
 
@@ -34,6 +36,7 @@ def create_coordenators(command):
         coordenators.append(user)
 
     command.cache['coordenators'] = coordenators
+
 
 def create_students(command):
     command.print('Creating students...')

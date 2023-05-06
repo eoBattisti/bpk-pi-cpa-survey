@@ -1,7 +1,6 @@
 import random
 import factory
 
-from core import defaults
 from core.factories import SubjectFactory
 from exams.models import Exam, ExamQuestion, Answer
 from questions.factories import QuestionFactory

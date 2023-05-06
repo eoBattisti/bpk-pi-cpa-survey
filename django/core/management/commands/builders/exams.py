@@ -5,6 +5,7 @@ from exams.factories import AnswersFactory, ExamFactory, ExamQuestionFactory
 from exams.models import Exam
 from users.models import User
 
+
 def create_exams(command):
     command.print('Creating exams...')
 
@@ -39,8 +40,7 @@ def create_exams_questions(command):
 def create_answers(command):
     command.print('Creating answers...')
 
-    answers = list ()
-    # try:
+    answers = list()
 
     for user in User.objects.filter(role=defaults.USER_ROLE_STUDENT):
         classroom_student = ClassroomStudent.objects.filter(student=user).first()
@@ -60,7 +60,4 @@ def create_answers(command):
                                         answerd_by=user)
             answers.append(answer)
 
-    # except Exception:
-    #     pass
-
-    # command.cache['answers'] = answers
+    command.cache['answers'] = answers

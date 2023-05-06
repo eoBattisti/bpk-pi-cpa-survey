@@ -3,11 +3,12 @@ import factory
 from core.models import Classroom, ClassroomStudent, Course, Subject
 from users.factories import UserFactory
 
+
 class CourseFactory(factory.django.DjangoModelFactory):
 
     title = factory.Faker('sentence', nb_words=3, locale='pt_BR')
     alias = factory.Faker('sentence', nb_words=1, ext_word_list=["ADS", "FAR",
-                                                              "CD", "ES"])
+                                                                 "CD", "ES"])
     coordenator = factory.SubFactory(UserFactory)
 
     class Meta:

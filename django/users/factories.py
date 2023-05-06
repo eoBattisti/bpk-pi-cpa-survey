@@ -9,11 +9,11 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     first_name = factory.Faker('first_name', locale='pt_BR')
     last_name = factory.Faker('last_name', locale='pt_BR')
-    email = factory.Sequence(lambda n: 'user-%d@biopark.com' % n)
+    email = factory.Sequence(lambda n: f'user-{n}@biopark.com')
     password = factory.PostGenerationMethodCall('set_password', 'atena')
 
-    cpf = factory.Sequence(lambda n: '%11d' % n)
-    ra = factory.Sequence(lambda n: '000%02d' % n)
+    cpf = factory.Sequence(lambda n: '%11d' % n)  # pylint: disable=consider-using-f-string
+    ra = factory.Sequence(lambda n: '000%02d' % n)  # pylint: disable=consider-using-f-string,invalid-name
     role = random.choice(defaults.USER_ROLES)[0]
     cpa_member = random.choice([True, False])
 

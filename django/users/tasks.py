@@ -19,13 +19,13 @@ def import_users(file_path):
         file_data = default_storage.open(file_path, 'rb')
         xls = pd.read_csv(file_data)
         user_roles = {
-             "Coordenador": defaults.USER_ROLE_CORDENATOR,
-             "Aluno": defaults.USER_ROLE_STUDENT,
-             "Professor": defaults.USER_ROLE_TEACHER,
-             "Funcionario": defaults.USER_ROLE_EMPLOYEE
+            "Coordenador": defaults.USER_ROLE_CORDENATOR,
+            "Aluno": defaults.USER_ROLE_STUDENT,
+            "Professor": defaults.USER_ROLE_TEACHER,
+            "Funcionario": defaults.USER_ROLE_EMPLOYEE
         }
         with transaction.atomic():
-            for row in xls.itertuples(index=False):  # pylint: disable=unused-variable
+            for row in xls.itertuples(index=False):
                 user = User.objects.update_or_create(first_name=row[0],
                                                      last_name=row[1],
                                                      email=row[2],

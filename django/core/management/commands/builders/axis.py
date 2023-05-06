@@ -1,5 +1,6 @@
 from axis.factories import AxleFactory
 
+
 def create(command):
     command.print('Creating axis...')
 

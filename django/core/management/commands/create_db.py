@@ -7,7 +7,7 @@ LOGGER = logging.getLogger('django')
 
 
 class Command(BaseCommand):
-    cache =  dict()
+    cache = {}
     size = 5
 
     def print(self, text):

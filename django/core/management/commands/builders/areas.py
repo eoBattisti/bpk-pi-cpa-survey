@@ -30,6 +30,7 @@ def create_areas_employees(command):
 
     command.cache['area_employees'] = area_employees
 
+
 def create_courses(command):
     command.print('Creating courses...')
 
@@ -41,6 +42,7 @@ def create_courses(command):
         courses.append(course)
 
     command.cache['courses'] = courses
+
 
 def create_subjects(command):
     command.print('Creating subjects...')
@@ -54,6 +56,7 @@ def create_subjects(command):
             subjects.append(subject)
 
     command.cache['subjects'] = subjects
+
 
 def create_classroom(command):
     command.print('Creating classrooms...')

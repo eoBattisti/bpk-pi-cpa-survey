@@ -1,6 +1,4 @@
-import random
 from questions.factories import QuestionFactory
-from core.factories import SubjectFactory
 
 
 def create_questions(command):
