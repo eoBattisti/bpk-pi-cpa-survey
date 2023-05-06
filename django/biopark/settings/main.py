@@ -26,6 +26,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ['http://localhost']
 
 AUTH_USER_MODEL = 'users.User'
+AUTHENTICATION_BACKENDS = ['users.backend.EmailBackend']
+
 
 APP_NAME = "BPK Survey"
 

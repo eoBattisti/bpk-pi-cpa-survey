@@ -18,6 +18,12 @@ class User(AbstractUser):
     ra = models.CharField(verbose_name="RA", max_length=8)  # pylint: disable=invalid-name
     role = models.SmallIntegerField(verbose_name='Role', choices=defaults.USER_ROLES)
     cpa_member = models.BooleanField(verbose_name="CPA Member", default=False)
+    username = models.CharField(max_length=1, null=True, blank=True)
+    email = models.EmailField(unique=True, null=True, blank=True, verbose_name='E-mail de login')
+
+    EMAIL_FIELD = 'email'
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name = "User"

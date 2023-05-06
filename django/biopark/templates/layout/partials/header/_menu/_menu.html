@@ -22,14 +22,16 @@
 				</div>
 				<!--end:Menu item-->
 				<!--begin:Menu item-->
-				<div class="menu-item">
-					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'CriarAvaliacao' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-						<span class="menu-title">Criar</span>
-					</a>
-					<!--end:Menu link-->
-				</div>
+				{% if resquest.user.cpa_member or request.user.is_staff %}
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="{% url 'CriarAvaliacao' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+							{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+							<span class="menu-title">Criar</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+				{% endif %}
 				<!--end:Menu item-->
 			</div>
 			<!--end:Menu sub-->
@@ -66,96 +68,95 @@
 				</div>
 				<!--end:Menu item-->
 			</div>
-			<!--end:Menu sub-->
-		</div>
-		<!--end:Menu item-->
-		<!--begin:Menu item-->
-		<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
-			<!--begin:Menu link-->
-			<span class="menu-link">
-				<span class="menu-title">Eixos</span>
-				<span class="menu-arrow d-lg-none"></span>
-			</span>
-			<!--end:Menu link-->
-			<!--begin:Menu sub-->
-			<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-				<!--begin:Menu item-->
-				<div class="menu-item">
-					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'axis:list' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/general/gen002.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-						<span class="menu-title">Listar</span>
-					</a>
-					<!--end:Menu link-->
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-title">Eixos</span>
+					<span class="menu-arrow d-lg-none"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="{% url 'axis:list' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+							{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/general/gen002.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+							<span class="menu-title">Listar</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="{% url 'axis:create' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+							{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+							<span class="menu-title">Cadastrar</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
 				</div>
-				<!--end:Menu item-->
-				<!--begin:Menu item-->
-				<div class="menu-item">
-					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'axis:create' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-						<span class="menu-title">Cadastrar</span>
-					</a>
-					<!--end:Menu link-->
-				</div>
-				<!--end:Menu item-->
+				<!--end:Menu sub-->
 			</div>
-			<!--end:Menu sub-->
-		</div>
-		<!--end:Menu item-->
-		<div data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
-			<!--begin:Menu link-->
+			<!--end:Menu item-->
+			<div data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+				<!--begin:Menu link-->
 
-			<a class="menu-link" href="{% url 'instituicao' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-				{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-				<span class="menu-title">Instituições</span>
-			</a>
-			<!--end:Menu link-->
-		</div>
-		<!--begin:Menu item-->
-		<div  data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
-			<!--begin:Menu link-->
-			<a class="menu-link" href="{% url 'relatorios' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-				{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-				<span class="menu-title">Relatórios</span>
-			</a>
-			<!--end:Menu link-->
-		</div>
-		<!--end:Menu item-->
-		<!--begin:Menu item-->
-		<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
-			<!--begin:Menu link-->
-			<span class="menu-link">
-				<span class="menu-title">Importar</span>
-				<span class="menu-arrow d-lg-none"></span>
-			</span>
-			<!--end:Menu link-->
-			<!--begin:Menu sub-->
-			<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-				<!--begin:Menu item-->
-				<div class="menu-item">
-					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'alunos' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/general/gen002.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-						<span class="menu-title">Alunos</span>
-					</a>
-					<!--end:Menu link-->
-				</div>
-				<!--end:Menu item-->
-				<!--begin:Menu item-->
-				<div class="menu-item">
-					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'professores' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
-						<span class="menu-title">Professores</span>
-					</a>
-					<!--end:Menu link-->
-				</div>
-				<!--end:Menu item-->
+				<a class="menu-link" href="{% url 'instituicao' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+					{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+					<span class="menu-title">Instituições</span>
+				</a>
+				<!--end:Menu link-->
 			</div>
-			<!--end:Menu sub-->
-		</div>
-		<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div  data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="{% url 'relatorios' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+					{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+					<span class="menu-title">Relatórios</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-title">Importar</span>
+					<span class="menu-arrow d-lg-none"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="{% url 'alunos' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+							{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/general/gen002.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+							<span class="menu-title">Alunos</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="{% url 'professores' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+							{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
+							<span class="menu-title">Professores</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+		{% endif %}
 	</div>
 	<!--end::Menu-->
 </div>

@@ -1,0 +1,56 @@
+[
+{
+  "model": "users.area",
+  "pk": "4f39c2fd-d714-4155-931a-187e3707be9f",
+  "fields": {
+    "created_at": "2023-04-22T20:02:09.372Z",
+    "updated_at": "2023-04-22T20:02:09.373Z",
+    "name": "Secretaria"
+  }
+},
+{
+  "model": "users.area",
+  "pk": "54770f07-15d9-44e3-a6c3-183c3041f491",
+  "fields": {
+    "created_at": "2023-04-22T20:02:55.409Z",
+    "updated_at": "2023-04-22T20:02:55.409Z",
+    "name": "Curso"
+  }
+},
+{
+  "model": "users.area",
+  "pk": "5fc22a20-91e8-4208-95be-9e45ff540484",
+  "fields": {
+    "created_at": "2023-04-22T20:02:22.179Z",
+    "updated_at": "2023-04-22T20:02:22.179Z",
+    "name": "Financeiro"
+  }
+},
+{
+  "model": "users.area",
+  "pk": "9a7d20d6-b8df-4e8c-9690-269902661bfe",
+  "fields": {
+    "created_at": "2023-04-22T20:02:34.566Z",
+    "updated_at": "2023-04-22T20:02:34.567Z",
+    "name": "Direção"
+  }
+},
+{
+  "model": "users.area",
+  "pk": "b7e5ca48-c1fb-4912-beb0-281ee5d94dce",
+  "fields": {
+    "created_at": "2023-04-22T20:02:41.069Z",
+    "updated_at": "2023-04-22T20:02:41.069Z",
+    "name": "Biblioteca"
+  }
+},
+{
+  "model": "users.area",
+  "pk": "d6477cca-3f62-4ff8-ba7b-af4717198300",
+  "fields": {
+    "created_at": "2023-04-22T20:02:44.908Z",
+    "updated_at": "2023-04-22T20:02:44.908Z",
+    "name": "Cantina"
+  }
+}
+]
