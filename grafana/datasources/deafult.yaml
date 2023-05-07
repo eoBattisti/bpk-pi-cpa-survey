@@ -1,0 +1,19 @@
+apiVersion: 1
+
+datasources:
+  - name: Postgres
+    type: postgres
+    url: postgres:5432
+    user: biopark
+    database: biopark
+    default: true
+    secureJsonData:
+      password: biopark
+    jsonData:
+      sslmode: 'disable'
+      maxOpenConns: 100
+      maxIdleConns: 100
+      maxIdleConnsAuto: true
+      connMaxLifetime: 14400
+      postgresVersion: 12000
+      timescaledb: false

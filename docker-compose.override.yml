@@ -1,6 +1,15 @@
 version: "3.7"
 
 services:
+  grafana:
+    restart: always
+    environment:
+      - GF_INSTALL_PLUGINS=agenty-flowcharting-panel
+      - PORSTGRES_HOST=postgres:5432
+      - PORSTGRES_DATABASE=biopark
+      - PORSTGRES_USER=biopark
+      - PORSTGRES_PASSWORD=biopark
+      - PORSTGRES_UID=_Vtmm9y4z
   postgres:
     env_file:
       - ./envs/postgres.env
