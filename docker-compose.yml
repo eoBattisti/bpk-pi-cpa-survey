@@ -1,23 +1,51 @@
 version: "3.7"
 
 services:
+
+  grafana:
+    image: grafana/grafana:8.3.0
+    hostname: grafana
+    container_name: bpk_grafana
+    volumes:
+      - grafana:/var/lib/grafana
+      - ./grafana/custom.ini:/etc/grafana/grafana.ini
+      - ./grafana/dashboards/:/etc/grafana/provisioning/dashboards/
+      - ./grafana/datasources/:/etc/grafana/provisioning/datasources/
+    depends_on:
+      - postgres
+    environment:
+      - GF_INSTALL_PLUGINS=agenty-flowcharting-panel
+    ports:
+      - "3000:3000"
+    networks:
+      - survey
+
   postgres:
     image: postgres:14
-    container_name: bpk_search_db
+    container_name: bpk_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - survey
 
   memcached:
     image: memcached:1.6
     container_name: bpk_search_cache
 
   django:
-    container_name: bpk_search_django
+    container_name: bpk_django
     working_dir: /code
     command: ["./docker/wait_db.sh", "./docker/start.sh"]
     depends_on:
       - postgres
       - memcached
+    networks:
+      - survey
 
 volumes:
   postgres_data:
+  grafana:
+
+networks:
+  survey:
+    name: survey
