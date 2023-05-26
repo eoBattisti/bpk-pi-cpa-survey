@@ -243,14 +243,10 @@ LOGGING = {
         },
     }
 }
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
-}
 
-GRAPH_MODELS = {
-  'app_labels': ['core', 'axis', 'exams', 'questions', 'users' ],
-}
+GRAPH_MODELS = {'all_applications': True, 'group_models': True}
+
+GRAPH_MODELS = {'app_labels': ['core', 'axis', 'exams', 'questions', 'users']}
 
 # Crispy Frontend Framework
 
