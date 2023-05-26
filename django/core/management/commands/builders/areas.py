@@ -22,11 +22,10 @@ def create_areas_employees(command):
     area_employees = list()
     areas = Area.objects.all()
     command.cache['areas'] = areas
-    for area in areas:
-        for _ in range(command.size):
-            employee = AreaEmployeeFactory(area=area,
-                                           employee=random.choice(command.cache['employees']))
-            area_employees.append(employee)
+    for employee in command.cache['employees']:
+        employee = AreaEmployeeFactory(area=random.choice(areas),
+                                       employee=employee)
+        area_employees.append(employee)
 
     command.cache['area_employees'] = area_employees
 
@@ -48,11 +47,10 @@ def create_subjects(command):
     command.print('Creating subjects...')
 
     subjects = list()
-
-    for course in command.cache['courses']:
-        for _ in range(command.size * 5):
-            teacher = random.choice(command.cache['teachers'])
-            subject = SubjectFactory(teacher=teacher, course=course)
+    for teacher in command.cache['teachers']:
+        for course in command.cache['courses']:
+            subject = SubjectFactory(teacher=teacher,
+                                     course=course)
             subjects.append(subject)
 
     command.cache['subjects'] = subjects

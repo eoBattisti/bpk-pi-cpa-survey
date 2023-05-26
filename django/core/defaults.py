@@ -17,3 +17,6 @@ ANSWER_TYPES = (
     (ANSWER_TYPE_DESCRIPTIVE, _('Descritiva')),
     (ANSWER_TYPE_OBJECTIVE, _('Objetiva')),
 )
+
+STRING_DATE_FORMAT = "%d/%m/%Y"
+STRING_DATETIME_FORMAT = "%d/%m/%Y %H:%M"

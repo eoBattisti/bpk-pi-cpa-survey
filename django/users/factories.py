@@ -1,6 +1,5 @@
-import random
 import factory
-
+from factory.fuzzy import FuzzyChoice
 from core import defaults
 from users.models import Area, AreaEmployee, User
 
@@ -14,8 +13,8 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     cpf = factory.Sequence(lambda n: '%11d' % n)  # pylint: disable=consider-using-f-string
     ra = factory.Sequence(lambda n: '000%02d' % n)  # pylint: disable=consider-using-f-string,invalid-name
-    role = random.choice(defaults.USER_ROLES)[0]
-    cpa_member = random.choice([True, False])
+    role = FuzzyChoice([id[0] for id in defaults.USER_ROLES])
+    cpa_member = FuzzyChoice([True, False])
 
     class Meta:
         model = User

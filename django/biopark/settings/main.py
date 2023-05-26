@@ -244,6 +244,10 @@ LOGGING = {
     }
 }
 
+GRAPH_MODELS = {'all_applications': True, 'group_models': True}
+
+GRAPH_MODELS = {'app_labels': ['core', 'axis', 'exams', 'questions', 'users']}
+
 # Crispy Frontend Framework
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
