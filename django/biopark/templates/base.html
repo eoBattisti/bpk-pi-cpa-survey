@@ -19,7 +19,6 @@
     <link rel="canonical" href="https://biopark.com.br/" />
     <link rel="shortcut icon" href="{% static 'media/logos/bpk-favicon.ico' %}" />
 
-    {% compress css %}
       {% block css-custom %}
         <link href="{% static 'css/custom_header.css' %}" rel="stylesheet">
         <link href="{% static 'plugins/custom/fullcalendar/fullcalendar.bundle.css' %}" rel="stylesheet" type="text/css" />
@@ -28,7 +27,6 @@
 
       <link href="{% static 'plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
       <link href="{% static 'css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
-    {% endcompress %}
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 
@@ -43,8 +41,8 @@
       }
     </style>
 
-    {% compress css %}{% block css-import %}{% endblock css-import %}{% endcompress %}
-    {% compress css inline %}{% block css-inline %}{% endblock css-inline %}{% endcompress %}
+    {% block css-import %}{% endblock css-import %}
+    {% block css-inline %}{% endblock css-inline %}
   </head>
   <body id="kt_app_body" data-kt-app-layout="light-header" data-kt-app-header-fixed="true" data-kt-app-toolbar-enabled="true" class="app-default">
     <script>
@@ -69,7 +67,6 @@
 
     <script>var hostUrl = "assets/";</script>
 
-    {% compress js %}
       <!-- Global JavaScript -->
       <script src="{% static 'plugins/global/plugins.bundle.js' %}"></script>
       <script src="{% static 'js/scripts.bundle.js' %}"></script>
@@ -88,7 +85,6 @@
         <script src="{% static 'js/widgets.bundle.js' %}"></script>
         <script src="{% static 'js/custom/widgets.js' %}"></script>
       {% endblock js-custom %}
-    {% endcompress %}
 
     {% block js-vendors-non-static %}
       <!-- Vendors non-static -->
@@ -110,7 +106,7 @@
     <script src="https://d3js.org/d3-scale.v1.min.js"></script>
 
     {% block js-notification %}{% endblock js-notification %}
-    {% compress js %}{% block js-import %}{% endblock js-import %}{% endcompress %}
-    {% compress js inline %}{% block js-inline %}{% endblock js-inline %}{% endcompress %}
+    {% block js-import %}{% endblock js-import %}
+    {% block js-inline %}{% endblock js-inline %}
   </body>
 </html>

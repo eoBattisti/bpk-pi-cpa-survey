@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -60,7 +61,8 @@ class Answer(BaseModel):
                                    blank=True)
     value = models.SmallIntegerField(verbose_name=_("Value"),
                                      null=True,
-                                     blank=True)
+                                     blank=True,
+                                     default=0)
     exam_question = models.ForeignKey("exams.ExamQuestion",
                                       verbose_name=_("Exam Question"),
                                       related_name="answer",
@@ -69,3 +71,4 @@ class Answer(BaseModel):
                                    verbose_name=_("Answered by"),
                                    related_name='answers',
                                    on_delete=models.CASCADE)
+    answered_at = models.DateTimeField(default=datetime.now, verbose_name=_("Answered At"))

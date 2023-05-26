@@ -1,5 +1,5 @@
-import random
 import factory
+from factory.fuzzy import FuzzyInteger
 
 from core.factories import SubjectFactory
 from exams.models import Exam, ExamQuestion, Answer
@@ -32,9 +32,10 @@ class ExamQuestionFactory(factory.django.DjangoModelFactory):
 
 class AnswersFactory(factory.django.DjangoModelFactory):
     description = factory.Faker('sentence', nb_words=10, locale='pt_BR')
-    value = random.randint(1, 10)
+    value = FuzzyInteger(1, 10)
     exam_question = factory.SubFactory(ExamQuestionFactory)
     answerd_by = factory.SubFactory(UserFactory)
+    answered_at = factory.Faker('date_this_year')
 
     class Meta:
         model = Answer
