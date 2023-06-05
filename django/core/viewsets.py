@@ -17,7 +17,7 @@ class ClassroomViewSet(viewsets.ModelViewSet):
     def import_csv(self, request):
         file_path = save_to_import(request.FILES['file'])
         import_classrooms(file_path)
-        return Response({'a': 'b'})
+        return Response({'message': 'Success'})
 
 
 class CourseViewSet(viewsets.ModelViewSet):
@@ -29,7 +29,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     def import_csv(self, request):
         file_path = save_to_import(request.FILES['file'])
         import_courses(file_path)
-        return Response({'a': 'b'})
+        return Response({'message': 'Success'})
 
 
 class SubjectViewSet(viewsets.ModelViewSet):
@@ -41,4 +41,4 @@ class SubjectViewSet(viewsets.ModelViewSet):
     def import_csv(self, request):
         file_path = save_to_import(request.FILES['file'])
         import_subjects(file_path)
-        return Response({'a': 'b'})
+        return Response({'message': 'Success'})

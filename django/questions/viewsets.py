@@ -17,4 +17,4 @@ class QuestionViewSet(viewsets.ModelViewSet):
     def import_csv(self, request):
         file_path = save_to_import(self.request.FILES['file'])
         import_questions(file_path)
-        return Response({'success': 'Importado com sucesso'})
+        return Response({'message': 'Success'})
