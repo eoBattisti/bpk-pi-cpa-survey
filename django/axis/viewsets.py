@@ -17,4 +17,4 @@ class AxleViewSet(viewsets.ModelViewSet):
     def import_csv(self, request):
         file_path = save_to_import(request.FILES['file'])
         import_axles(file_path)
-        return Response({'a': 'b'})
+        return Response({'message': 'Success'})
