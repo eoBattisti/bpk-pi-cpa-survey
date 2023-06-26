@@ -35563,7 +35563,7 @@ code:not([class*=language-]) {
 .form-control.form-control-solid {
   background-color: var(--kt-input-solid-bg);
   border-color: var(--kt-input-solid-bg);
-  color: var(--kt-input-solid-color);
+  color: var(--kt-input-solid-color);kan
   transition: color 0.2s ease;
 }
 .form-control.form-control-solid::placeholder {

@@ -14,7 +14,7 @@
 				<!--begin:Menu item-->
 				<div class="menu-item">
 					<!--begin:Menu link--> 
-					<a class="menu-link" href="{% url 'ListagemAvaliacao' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+					<a class="menu-link" href="{% url 'exams:list' %}"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/general/gen002.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
 						<span class="menu-title">Listar</span>
 					</a>
@@ -24,7 +24,7 @@
 				<!--begin:Menu item-->
 				<div class="menu-item">
 					<!--begin:Menu link-->
-					<a class="menu-link" href="{% url 'CriarAvaliacao' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+					<a class="menu-link" href="{% url 'exams:create' %}" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 						{% comment %} <span class="menu-icon">{% getSvgIcon 'duotune/abstract/abs027.svg' 'svg-icon svg-icon-3' %}</span> {% endcomment %}
 						<span class="menu-title">Criar</span>
 					</a>

@@ -15,7 +15,7 @@
 }
 
 .kanban-board {
-  position: relative;
+  position: inline-block;
   float: left;
   background: #e2e4e6;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -144,4 +144,14 @@
 
 .drag_handler_icon:after {
   bottom: 6px;
+}
+
+.kanban-board {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px; /* margem entre os boards */
+}
+
+.kanban-board:last-child {
+  margin-right: 0;
 }

@@ -34,18 +34,24 @@ class PerguntasCad(TemplateView):
     template_name = 'prepages/perguntas/CadastroPerguntas.html'
 
 
-class AvaliacaoList(TemplateView):
+class ExamListView(TemplateView):
     """
     TemplateView de exemplo
     """
     template_name = 'prepages/avaliacao/ListagemAvaliacao.html'
 
 
-class AvaliacaoCad(TemplateView):
+class ExamCreateView(TemplateView):
     """
     TemplateView de exemplo
     """
-    template_name = 'prepages/avaliacao/CriarAvaliacao.html'
+    template_name = 'form/exams_editor.html'
+
+class ExamUpdateView(TemplateView):
+    """
+    TemplateView de exemplo
+    """
+    template_name = 'form/exams_editor.html/<uuid:pk>'
 
 
 class EixosList(TemplateView):

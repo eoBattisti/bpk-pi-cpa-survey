@@ -1,11 +1,12 @@
 from django.db import models
+
 from django.utils.translation import gettext_lazy as _
 
 from core.models import BaseModel
 
 
 class Exam(BaseModel):
-    """Mode para representar uma avaliação"""
+
     title = models.CharField(verbose_name=_("Title"), max_length=50)
     start_date = models.DateTimeField(verbose_name=_("Start date"))
     end_date = models.DateTimeField(verbose_name=_("End date"))
@@ -25,6 +26,7 @@ class Exam(BaseModel):
                                 on_delete=models.CASCADE,
                                 null=True,
                                 blank=True)
+    
 
     class Meta:
         verbose_name = _("Exam")

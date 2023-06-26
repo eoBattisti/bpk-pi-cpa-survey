@@ -2,26 +2,29 @@
 
 //TABELA DE EIXO SCROLLBAR
 $("#kt_datatable_fixed_columns").DataTable({
-	scrollY:        "300px",
+	scrollY:        "auto", // Define a altura da tabela como "auto"
 	scrollX:        true,
 	scrollCollapse: true,
 	fixedColumns:   {
 		left: 2
-	}
+	},
+	paging: true,
+	pageLength: 10
 });
 //TABELA DE EIXO SCROLLBAR
 
 //DESEJA APAGAR O EIXO CADASTRADO?
-const excluireixo = document.getElementById('ApagarEixo');
 
-excluireixo.addEventListener('click', e =>{
+
+
+$('button[name="ApagarEixo"]').on('click', function (e){
     e.preventDefault();
 
     let config = {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
-            "X-CSRFToken": excluireixo.getAttribute('data-csrf-token')
+            "X-CSRFToken": $(this).data('csrf-token')
         },
     }
 
@@ -38,7 +41,7 @@ excluireixo.addEventListener('click', e =>{
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            let api = excluireixo.getAttribute('data-delete-url');
+            let api = $(this).data('delete-url');
             fetch(api, config)
             .then(response => {
                 console.log(response.status)
