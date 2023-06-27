@@ -22,18 +22,12 @@ class HomeView(LoginRequiredMixin, TemplateView):
     template_name = 'prepages/home/home.html'
 
 
-
-
-
 class PerguntasList(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
     login_url = reverse_lazy('login')
     template_name = 'prepages/perguntas/ListagemPerguntas.html'
-
-
-
 
 
 class PerguntasCad(LoginRequiredMixin, TemplateView):
@@ -44,17 +38,12 @@ class PerguntasCad(LoginRequiredMixin, TemplateView):
     template_name = 'prepages/perguntas/CadastroPerguntas.html'
 
 
-    
-
-
 class AvaliacaoList(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
     login_url = reverse_lazy('login')
     template_name = 'prepages/avaliacao/ListagemAvaliacao.html'
-
-    
 
 
 class AvaliacaoCad(LoginRequiredMixin, TemplateView):
@@ -64,8 +53,6 @@ class AvaliacaoCad(LoginRequiredMixin, TemplateView):
     login_url = reverse_lazy('login')
     template_name = 'prepages/avaliacao/CriarAvaliacao.html'
 
-    
-
 
 class EixosList(LoginRequiredMixin, TemplateView):
     """
@@ -73,8 +60,6 @@ class EixosList(LoginRequiredMixin, TemplateView):
     """
     login_url = reverse_lazy('login')
     template_name = 'prepages/eixos/ListagemEixos.html'
-
-    
 
 
 class EixosCad(LoginRequiredMixin, TemplateView):
@@ -84,8 +69,6 @@ class EixosCad(LoginRequiredMixin, TemplateView):
     login_url = reverse_lazy('login')
     template_name = 'prepages/eixos/CadastroEixos.html'
 
-    
-
 
 class Instituicao(LoginRequiredMixin, TemplateView):
     """
@@ -93,8 +76,6 @@ class Instituicao(LoginRequiredMixin, TemplateView):
     """
     login_url = reverse_lazy('login')
     template_name = 'prepages/instituicao/instituicao.html'
-
-    
 
 
 class Relatorios(LoginRequiredMixin, TemplateView):
@@ -104,8 +85,6 @@ class Relatorios(LoginRequiredMixin, TemplateView):
     login_url = reverse_lazy('login')
     template_name = 'prepages/relatorios/relatorios.html'
 
-    
-
 
 class ImportarAlunos(LoginRequiredMixin, TemplateView):
     """
@@ -114,8 +93,6 @@ class ImportarAlunos(LoginRequiredMixin, TemplateView):
     login_url = reverse_lazy('login')
     template_name = 'prepages/importar/alunos.html'
 
-    
-
 
 class ImportarProfessores(LoginRequiredMixin, TemplateView):
     """
@@ -123,8 +100,6 @@ class ImportarProfessores(LoginRequiredMixin, TemplateView):
     """
     login_url = reverse_lazy('login')
     template_name = 'prepages/importar/professores.html'
-
-    
 
 
 class Handler400View(TemplateView):
