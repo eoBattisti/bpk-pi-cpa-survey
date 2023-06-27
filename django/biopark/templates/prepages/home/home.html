@@ -1,31 +1,12 @@
 {% extends 'layout/_default.html' %}
 {% load static crispy_forms_tags widget_tweaks %}
 
-{% comment %} {% block toolbar %}
-<!--begin::Toolbar-->
-<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-	<!--begin::Toolbar container-->
-	<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
-		<div th:replace="${@theme.getView('partials/sidebar-layout/_page-title.html')}"></div>
-		<!--begin::Actions-->
-		<!--end::Actions-->
-	</div>
-	<!--end::Toolbar container-->
-</div>
-<!--end::Toolbar-->
-{% endblock toolbar %} {% endcomment %}
-
 {% block content %}
 <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
     <div th:replace="${@theme.getView('partials/sidebar-layout/_page-title.html')}"></div>
     <!--begin::Actions-->
     <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
-        <img alt="Logo" src="{% static 'media/custom/3675500.jpg' %}" class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-600px ">
-        <div class="text-center mb-11">
-            <h1>Site em Construção!</h1>
-            <div class="text-gray-400 fw-semibold fs-6">
-              Em breve, novas funcionalidades!
-            </div>
+        <iframe style="width: 100%; height:800px"src="http://localhost:3000/d/5xStrXU4z/dashboardscpa?kiosk"></iframe>
       </div>
     <!--end::Actions-->
     </div>
