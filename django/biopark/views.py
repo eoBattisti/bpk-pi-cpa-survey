@@ -1,5 +1,6 @@
 """Biopark views for Biopark Search project."""
 from django.views.generic import TemplateView, RedirectView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from users.models import User
 
@@ -16,77 +17,88 @@ class InitialView(RedirectView):
         return reverse_lazy("home")
 
 
-class HomeView(TemplateView):
+class HomeView(LoginRequiredMixin, TemplateView):
+    login_url = reverse_lazy('login')
     template_name = 'prepages/home/home.html'
 
 
-class PerguntasList(TemplateView):
+class PerguntasList(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/perguntas/ListagemPerguntas.html'
 
 
-class PerguntasCad(TemplateView):
+class PerguntasCad(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/perguntas/CadastroPerguntas.html'
 
 
-class AvaliacaoList(TemplateView):
+class AvaliacaoList(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/avaliacao/ListagemAvaliacao.html'
 
 
-class AvaliacaoCad(TemplateView):
+class AvaliacaoCad(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/avaliacao/CriarAvaliacao.html'
 
 
-class EixosList(TemplateView):
+class EixosList(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/eixos/ListagemEixos.html'
 
 
-class EixosCad(TemplateView):
+class EixosCad(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/eixos/CadastroEixos.html'
 
 
-class Instituicao(TemplateView):
+class Instituicao(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/instituicao/instituicao.html'
 
 
-class Relatorios(TemplateView):
+class Relatorios(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/relatorios/relatorios.html'
 
 
-class ImportarAlunos(TemplateView):
+class ImportarAlunos(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/importar/alunos.html'
 
 
-class ImportarProfessores(TemplateView):
+class ImportarProfessores(LoginRequiredMixin, TemplateView):
     """
     TemplateView de exemplo
     """
+    login_url = reverse_lazy('login')
     template_name = 'prepages/importar/professores.html'
 
 
