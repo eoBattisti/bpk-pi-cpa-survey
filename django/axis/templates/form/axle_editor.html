@@ -28,17 +28,25 @@
 <div>
 <div id="kt_app_content" class="app-content flex-column-fluid">
   <div id="kt_app_content_container" class="app-container container-xxl">
+    <div class="card mb-5 mb-xl-8">
+      <div class="card-header border-0 pt-5">
+        <h3 class="card-title align-items-start flex-column">
+          <span class="card-label fw-bold fs-3 mb-1" id="kt_table_title">Cadastrar</span>
+      </div>
+      <div class="card-body py-3">
     <form id="kt_company_editor_form" class="form" method="post" enctype="multipart/form-data" novalidate>
       {% csrf_token %}
-    <div class="input-group mb-5">
-      <span class="input-group-text" id="basic-addon1">Nome do eixo</span>
+    <div class="flex-row-fluid pt-5">
+      <label for="" class="form-label">Nome do Eixo:</label>
       {{ form.name|add_class:"form-control" }}
     </div>
-<div>
-  <label for="" class="form-label">Descrição</label>
+  <div class="flex-row-fluid pt-5">
+  <label for="" class="form-label">Descrição:</label>
   <div style="bg-color blue" class="col-height" >
     {{ form.description|add_class:"form-control mb-5"}}
   </div>
+</div>
+</div>
 </div>
 </form>
     </form >
